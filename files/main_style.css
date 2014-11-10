@@ -8,8 +8,8 @@
  h3 { font-size: 20px; padding: .5em 0 .2em 0; line-height: 1.2; font-family: 'Open Sans', sans-serif; font-weight: bold; color: #448eb8; letter-spacing:-1px; }
  h5 { visibility: hidden; color: #ffffff; }
  h6 { text-align: justify; color: #708090; }
- a { color: #448eb8; }
- a:hover { color: #80b6d5; }
+ a { color: #blue; }
+ a:hover { color: #blue; text-decoration: underline;}
  h2 { font-size: 24px; padding: .5em 0 .2em 0; line-height: 1.2; font-family: 'Open Sans', sans-serif; font-weight: bold; color: #448eb8; letter-spacing:-1px; }
  div.paragraph { font-size: 14px; line-height: 1.5; padding: .5em 0; color: #6d6d6d; }
  p { font-size: 14px; line-height: 1.5; padding: .5em 0; color: #6d6d6d; }
@@ -121,6 +121,7 @@
  .wsite-button-large.wsite-button-highlight { background-image: url(theme/button_large_highlight-blue.png?1415525403); }
  .wsite-button-large.wsite-button-highlight .wsite-button-inner { background-image: url(theme/button_large_highlight-blue.png?1415525403); }
 
+seforim {color: red !important;}
 div.paragraph ul, div.paragraph ol { padding-left: 2.3em !important; margin: 5px 0 !important; overflow:hidden; }
 div.paragraph li { padding-left: 5px !important; margin: 3px 0 0 !important; }
 div.paragraph ul, div.paragraph ul li { list-style: disc outside !important; }
