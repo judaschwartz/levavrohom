@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!DOCTYPE html><html><head><script>
+var shkiah = [5, 39];
+var parsha = "Ki-Siesah";
+</script>
 <link rel="icon" href="https://raw.githubusercontent.com/judaschwartz/levavrohom/gh-pages/uploads/favicon.ico">
 
 
@@ -113,9 +114,17 @@ else document.observe('dom:loaded', initFlyouts);
 				</td>				<td class="wsite-multicol-col" style="width:36.755021947303%; padding:0 15px;">
 					
 						
-
-<div class="paragraph" style="text-align:center;"><font size="5"><span style="line-height: 36px;"><strong><u>Parshas Ki-Siesah</u></strong></span></font><br><strong><font size="5">Seder Limud: 3:00</font></strong><br><strong style="line-height: 1.5; background-color: initial;"><font size="5">Minchah: 5:19</font></strong><br><strong style="font-size: x-large; line-height: 1.5;">Seder Limud: 6:10</strong><br><strong style=""><font size="5">Shacharis: 8:10</font></strong><br><strong style=""><font size="5">Minchah: 1:15, 5:00</font></strong><br><strong style=""><font size="5">Maariv: 6:25</font></strong></div>
-
+<script>
+var d = new Date();
+d.setHours(shkiah[0], shkiah[1]);
+var m = new Date();
+m.setTime(d.getTime() - 1200000);
+var sm = new Date();
+sm.setTime(d.getTime() - 2400000);
+var ma = new Date();
+ma.setTime(d.getTime() + 2700000);
+document.write('<div class="paragraph" style="text-align:center;"><font size="5"><span style="line-height: 36px;"><strong><u>Parshas '+parsha+'</u></strong></span></font><br><strong><font size="5">Seder Limud: 3:00</font></strong><br><strong style="line-height: 1.5; background-color: initial;"><font size="5">Minchah: '+m.getHours()+':'+m.getMinutes()+'</font></strong><br><strong style="font-size: x-large; line-height: 1.5;">Seder Limud: 6:10</strong><br><strong style=""><font size="5">Shacharis: 8:10</font></strong><br><strong style=""><font size="5">Minchah: 1:15, '+sm.getHours()+':'+sm.getMinutes()+'</font></strong><br><strong style=""><font size="5">Maariv: '+ma.getHours()+':'+ma.getMinutes()+'</font></strong></div>');
+</script>
 
 					
 				</td>				<td class="wsite-multicol-col" style="width:13.263773782708%; padding:0 15px;">
