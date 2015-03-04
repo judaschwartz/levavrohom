@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><script>
-var shkiah = [5, 39];
-var parsha = "Tezaveh";
+var shkiah = [5, 45];
+var morn = [8, ':00'];
+var parsha = "Ki-Sisa";
 </script>
 <link rel="icon" href="https://raw.githubusercontent.com/judaschwartz/levavrohom/gh-pages/uploads/favicon.ico">
 
@@ -87,7 +88,14 @@ else document.observe('dom:loaded', initFlyouts);
             </div><!-- end banner -->
         </div><!-- end container -->
     </div><!-- end banner-wrap -->
-    
+<div class="paragraph" style="text-align:center;">
+<strong style="font-size: xx-large;"><u>Purim Scedule</u><br>
+Mincha: 5:25 Mariv followed by megilah reading: 6:20<br>
+Shachris: 7:15 Minchah: 12:30 <br>
+Sudah contiuation from 4:00 <br>
+Kabals Shabbos: 5:45 followed by kiddush and suddah<br>
+Mariv: 7:30 (aprox.)
+</strong></div>    
 <div id="main-wrap">
         <div class="container">
    			<div id="wsite-content" class="wsite-elements wsite-not-footer">
@@ -105,9 +113,12 @@ else document.observe('dom:loaded', initFlyouts);
 					
 				</td>				<td class="wsite-multicol-col" style="width:36.755021947303%; padding:0 15px;">
 					
-						
 
-<div class="paragraph" style="text-align:center;"><strong style="font-size: xx-large;"><br>Shacharis: &nbsp; 7:15&nbsp;</strong><br><strong style="line-height: 1.5; background-color: initial;"><font size="2">(7:05 monday and thursday)</font></strong><span style="line-height: 15px;"><br></span><strong style="font-size: xx-large;">Minchah: 1:15<br>Maariv: &nbsp;7:15, 8:45</strong></div>
+
+<div class="paragraph" style="text-align:center;"><strong style="font-size: xx-large;"><br>Shacharis: &nbsp; 7:15&nbsp;</strong><br><strong style="line-height: 1.5; background-color: initial;"><font size="2">(7:05 monday and thursday)</font></strong><span style="line-height: 15px;"><br></span><strong style="font-size: xx-large;">Minchah: 1:15<br>Maariv: &nbsp;7:15, 8:45</strong>
+
+
+</div>
 
 
 					
@@ -125,7 +136,7 @@ var sm = new Date();
 sm.setTime(d.getTime() - 2400000);
 var ma = new Date();
 ma.setTime(d.getTime() + 2700000);
-document.write('<div class="paragraph" style="text-align:center;"><font size="5"><span style="line-height: 36px;"><strong><u>Parshas '+parsha+'</u></strong></span></font><br><strong><font size="5">Seder Limud: '+s.getHours()+':'+s.getMinutes()+'</font></strong><br><strong style="line-height: 1.5; background-color: initial;"><font size="5">Minchah: '+m.getHours()+':'+m.getMinutes()+'</font></strong><br><strong style="font-size: x-large; line-height: 1.5;">Seder Limud: 6:10</strong><br><strong style=""><font size="5">Shacharis: 8:10</font></strong><br><strong style=""><font size="5">Minchah: 1:15, '+sm.getHours()+':'+sm.getMinutes()+'</font></strong><br><strong style=""><font size="5">Maariv: '+ma.getHours()+':'+ma.getMinutes()+'</font></strong></div>');
+document.write('<div class="paragraph" style="text-align:center;"><font size="5"><span style="line-height: 36px;"><strong><u>Parshas '+parsha+'</u></strong></span></font><br><strong><font size="5">Seder Limud: '+s.getHours()+':'+s.getMinutes()+'</font></strong><br><strong style="line-height: 1.5; background-color: initial;"><font size="5">Minchah: '+m.getHours()+':'+m.getMinutes()+'</font></strong><br><strong style="font-size: x-large; line-height: 1.5;">Seder Limud: '+(morn[0]-2) + morn[1] +'</strong><br><strong style=""><font size="5">Shacharis: '+ morn[0] + morn[1] +'</font></strong><br><strong style=""><font size="5">Minchah: 1:15, '+sm.getHours()+':'+sm.getMinutes()+'</font></strong><br><strong style=""><font size="5">Maariv: '+ma.getHours()+':'+ma.getMinutes()+'</font></strong></div>');
 </script>
 
 					
