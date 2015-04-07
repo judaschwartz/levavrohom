@@ -157,14 +157,12 @@ function zero(i) {
     return i;
 }
 var d = new Date();
-d.setHours(shkiah[0], shkiah[1]);
+d.setHours(x.slice(12,13), x.slice(15,17));
 var m = new Date();
-m.setTime(d.getTime() - 1200000);
-var sm = new Date();
-sm.setTime(d.getTime() - 2400000);
+m.setTime(d.getTime() + 1200000);
 var ma = new Date();
-ma.setTime(d.getTime() + 2700000);
-document.write('<div class="paragraph" style="text-align:center;"><font size="5"><span style="line-height: 36px;"><strong><u>Parshas '+parsha+'</u></strong></span></font><br><strong><font size="5">Seder Limud: '+(m.getHours()-2)+':'+zero(m.getMinutes())+'</font></strong><br><strong style="line-height: 1.5; background-color: initial;"><font size="5">Minchah: '+m.getHours()+':'+zero(m.getMinutes())+'</font></strong><br><strong style="font-size: x-large; line-height: 1.5;">Seder Limud: '+(morn[0]-2) + morn[1] +'</strong><br><strong style=""><font size="5">Shacharis: '+ morn[0] + morn[1] +'</font></strong><br><strong style=""><font size="5">Minchah: 1:15, '+sm.getHours()+':'+zero(sm.getMinutes())+'</font></strong><br><strong style=""><font size="5">Maariv: '+ma.getHours()+':'+zero(ma.getMinutes())+'</font></strong></div>');
+ma.setTime(d.getTime() + 5100000);
+document.write('<div class="paragraph" style="text-align:center;"><font size="5"><span style="line-height: 36px;"><strong><u>Parshas '+parsha+'</u></strong></span></font><br><strong><font size="5">Seder Limud: '+(m.getHours()-2)+':'+zero(m.getMinutes())+'</font></strong><br><strong style="line-height: 1.5; background-color: initial;"><font size="5">Minchah: '+m.getHours()+':'+zero(m.getMinutes())+'</font></strong><br><strong style="font-size: x-large; line-height: 1.5;">Seder Limud: '+(morn[0]-2) + morn[1] +'</strong><br><strong style=""><font size="5">Shacharis: '+ morn[0] + morn[1] +'</font></strong><br><strong style=""><font size="5">Minchah: '+d.getHours()+':'+zero(d.getMinutes())+'</font></strong><br><strong style=""><font size="5">Maariv: '+ma.getHours()+':'+zero(ma.getMinutes())+'</font></strong></div>');
 </script>
 
 					
