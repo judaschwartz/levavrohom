@@ -181,7 +181,7 @@ else document.observe('dom:loaded', initFlyouts);
           type: 'POST',
           url: url_sheet,
           data: $('#contactForm').serialize(),
-          success: function(data){alert('Your commment has been recieved');}
+          done: function(data){alert('Your commment has been recieved');}
         });
         e.preventDefault();
       });
