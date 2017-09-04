@@ -92,7 +92,7 @@ else document.observe('dom:loaded', initFlyouts);
 <div>
 
 
-<form name="contactForm" id="contactForm" method="post"  action="http://www.formhelper.site90.net/form.php" style="width: px; border: 0px solid #000000; margin: 0; padding: 0; background-color: transparent;">
+<form name="contactForm" id="contactForm" method="post"  action="" style="width: px; border: 0px solid #000000; margin: 0; padding: 0; background-color: transparent;">
 <table summary="This table contains contact form fields." width="100%" cellpadding="0" cellspacing="0">
  <tr style="margin: 0; padding: 0;">
     <h2 class="wsite-content-title" style="text-align:left;">Feel free to leave any comments or questions</h2>
@@ -101,11 +101,11 @@ else document.observe('dom:loaded', initFlyouts);
 				<label class="wsite-form-label" for="input-420360950870382356">Name <span class="form-required">*</span></label>
 				<div style="clear:both;"></div>
 				<div class="wsite-form-input-container wsite-form-left wsite-form-input-first-name">
-					<input id="first_name" class="wsite-form-input wsite-input" type="text" name="f_name" />
+					<input id="first_name" class="wsite-form-input wsite-input" type="text" name="entry.652196838" />
 					<label class="wsite-form-sublabel" for="f_name">First</label>
 				</div>
 				<div class="wsite-form-input-container wsite-form-right wsite-form-input-last-name">
-					<input id="last_name" class="wsite-form-input wsite-input" type="text" name="l_name" />
+					<input id="last_name" class="wsite-form-input wsite-input" type="text" name="entry.1027362287" />
 					<label class="wsite-form-sublabel" for="l_name">Last</label>
 				</div>
 				<div id="instructions-420360950870382356" class="wsite-form-instructions" style="display:none;"></div>
@@ -119,7 +119,7 @@ else document.observe('dom:loaded', initFlyouts);
     <div><div class="wsite-form-field" style="margin:5px 0px 5px 0px;">
 				<label class="wsite-form-label" for="email">Email <span class="form-required">*</span></label>
 				<div class="wsite-form-input-container">
-					<input id="email" class="wsite-form-input wsite-input wsite-input-width-370px" type="email" name="email" />
+					<input id="email" class="wsite-form-input wsite-input wsite-input-width-370px" type="email" name="entry.563355493" />
 				</div>
 				<div id="instructions-187531610904589402" class="wsite-form-instructions" style="display:none;"></div>
 			</div></div>
@@ -130,7 +130,7 @@ else document.observe('dom:loaded', initFlyouts);
     <div><div class="wsite-form-field" style="margin:5px 0px 5px 0px;">
 				<label class="wsite-form-label" for="phone">Phone Number </label>
 				<div class="wsite-form-input-container">
-					<input id="telephone" class="wsite-form-input wsite-input wsite-input-width-370px" type="text" name="phone" />
+					<input id="telephone" class="wsite-form-input wsite-input wsite-input-width-370px" type="text" name="entry.303367462" />
 				</div>
 				<div id="instructions-187531610904589402" class="wsite-form-instructions" style="display:none;"></div>
 			</div></div>
@@ -141,7 +141,7 @@ else document.observe('dom:loaded', initFlyouts);
     <div><div class="wsite-form-field" style="margin:5px 0px 5px 0px;">
 				<label class="wsite-form-label" for="comments">Comment <span class="form-required">*</span></label>
 				<div class="wsite-form-input-container">
-					<textarea id="comments" class="wsite-form-input wsite-input wsite-input-width-370px" name="comments" style="height: 150px"></textarea>
+					<textarea id="comments" class="wsite-form-input wsite-input wsite-input-width-370px" name="entry.1081575682" style="height: 150px"></textarea>
 				</div>
 				<div id="instructions-826035066654880732" class="wsite-form-instructions" style="display:none;"></div>
 			</div></div>
@@ -173,8 +173,19 @@ else document.observe('dom:loaded', initFlyouts);
         <p style="font-size: 11px; color: #c5c5c5;">Powered by <a href="http://formhelper.site90.net/" target="_blank" style="font-size: 11px; color: #c6c6c6;">FormHelper</a></p>
 
     </div><!-- end main-wrap -->
-
-
-
+<script type='text/javascript'>
+    $(document).ready(function(){
+      $('#contactForm').submit(function(e) {
+        var url_sheet = 'https://docs.google.com/forms/d/1PQy0dwVoBJt42IvZiJk5ps5DbhOEuB5chpsA_v5fmLk/formResponse';
+        $.ajax({
+          type: 'POST',
+          url: url_sheet,
+          data: $('#contactForm').serialize(),
+          success: function(data){alert('Your commment has been recieved');}
+        });
+        e.preventDefault();
+      });
+    });
+    </script>
 </body>
 </html>
